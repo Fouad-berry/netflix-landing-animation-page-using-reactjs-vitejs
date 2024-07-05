@@ -1,0 +1,292 @@
+/* #root {
+
+  margin: 0 auto;
+
+} */
+
+body {
+  background-color: #141414;
+  color: white;
+  width: 100%;
+  height: 100vh;
+}
+
+.thebrowse{
+  background-color: #141414;
+  color: white;
+  place-items: center;
+  font-size: 46px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+/*   padding: 0 15px; */
+}
+
+.Start {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+}
+
+.macarte {
+  background-color: #333;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 10vw;
+  max-width: 200px;
+  min-height: 84px;
+  min-width: 84px;
+  position: relative;
+  text-decoration: none;
+  width: 10vw;
+}
+
+.question {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  margin: 23px 0px;
+}
+
+.card-text{
+ color: white;
+ margin: 0;
+ font-size: 18px;
+ display: flex;
+ justify-content: center;
+}
+
+/* Banner css */
+/* .banner {
+  margin-top: 0;
+  padding: 260px 0 100px 0;
+  background-image: url('./assets/img/dev.jpg');
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+
+.banner-img {
+  width: 100%;   /* L'image occupera 100% de la largeur du conteneur */
+  height: auto;  /* La hauteur sera ajustée automatiquement pour conserver les proportions */
+  max-width: 100%; /* Limite la largeur maximale de l'image à 100% */
+  display: block; /* Permet de centrer correctement l'image */
+}
+
+nav.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  transition:  0.32s ease-in-out;
+  /* box-shadow: 0 2px 4px rgba(6, 6, 6, 12);  *//* La box shadow est sombre */
+}
+
+a.nav-link{
+  color: white;
+  font-weight: bold;
+  font-weight: unset;
+}
+
+a.nav-link:hover{
+  color: black;
+  font-weight: bold;
+  font-weight: unset;
+}
+
+.banner-text {
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 90px;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  font-size: 50px;
+  font-weight: Bold;
+  width: 40%;
+  border-radius: 25px;
+}
+
+.banner-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.banner-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.dexcri{
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+  .banner-text {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+/* Card */
+
+.mycard {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  /* background-image: linear-gradient(
+      45deg,
+      rgb(204, 12, 12) 1%,
+      rgb(252, 132, 132) 95%
+    ),
+    linear-gradient(-45deg, #ff0000 0%, rgba(175, 255, 238, 0.5) 80%); */
+  background: linear-gradient(#1f242b 30%, #221e1d);
+}
+.mycard::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(./assets/marvels-city.jpg);
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  background-size: contain;
+}
+.mycard::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(./assets/stars.png);
+  opacity: 0.3;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-size: contain;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.flip-card {
+  margin: 20px;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+.flip-card-front,
+.flip-card-back {
+  width: 380px;
+  min-height: 600px;
+  height: auto;
+  background-color: #000000;
+  background-image: url(./assets/Naruto.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  border-radius: 20px;
+  box-shadow: rgba(106, 102, 102, 0.25) 0px 54px 55px,
+    rgba(209, 199, 199, 0.12) 0px -12px 30px, rgba(194, 178, 178, 0.12) 0px 4px 6px,
+    rgba(172, 158, 158, 0.17) 0px 12px 13px, rgba(205, 186, 186, 0.09) 0px -3px 5px;
+}
+.flip-card:nth-of-type(2) .flip-card-front,
+.flip-card:nth-of-type(2) .flip-card-back {
+  background-image: url(./assets/seven_7.jpg);
+}
+.flip-card:nth-of-type(3) .flip-card-front,
+.flip-card:nth-of-type(3) .flip-card-back {
+  background-image: url(./assets/Death-note.jpg);   
+}
+.flip-card:nth-of-type(4) .flip-card-front,
+.flip-card:nth-of-type(4) .flip-card-back {
+  background-image: url(./assets/Jujustsu-kaizen.png);   
+}
+.flip-card:nth-of-type(5) .flip-card-front,
+.flip-card:nth-of-type(5) .flip-card-back {
+  background-image: url(./assets/Chainsaw-man.png);   
+}
+.flip-card:nth-of-type(6) .flip-card-front,
+.flip-card:nth-of-type(6) .flip-card-back {
+  background-image: url(./assets/Attaque-des-titans.jpg);   
+}
+.flip-card-front {
+  transform: rotateY(0deg);
+}
+.flip-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+}
+.flip-card-front::after,
+.flip-card-back::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #0a0a0a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  border-radius: 20px;
+}
+.flip-card-front .inner,
+.flip-card-back .inner {
+  width: 100%;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateZ(60px) scale(0.94);
+  z-index: 2;
+}
+.inner .icon {
+  width: 80px;
+  margin-bottom: 20px;
+}
+.inner h3 {
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 40px;
+  text-transform: capitalize;
+}
+.inner p {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 28px;
+}
+.flip-card:hover .flip-card-front {
+  transform: rotateY(-180deg);
+}
+.flip-card:hover .flip-card-back {
+  transform: rotateY(0deg);
+}
+
+.theanime{
+  display: flex;
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  gap: 20px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
